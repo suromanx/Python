@@ -1,5 +1,10 @@
-num = len(input('Введите число'))
-k=-1
+number =int(input('Введите Число блять'))
+num = number // 2
+k = 1
 while k < num:
-    k = k+1
-    print('В этом числе',k,'чисел!')
+    if number // k == 0:
+        print('Это ахуеть какое простое число')
+    else:
+        print('Это не очень то и простое число')
+        break
+print('Программа завершена')
