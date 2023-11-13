@@ -1,13 +1,8 @@
-number = int(input('Введите Число блять'))
-num = number // 2
-k = 2
-while k < num:
-    if number % k == 0:
-        print('Это число не является простым')
-        break
-    else:
-        k = k+1
-
-else:
-    print("Это простое число")
-print('Программа завершена')
+number = int(input('Введите число'))
+print('Число делится на :'+str(1))
+k = 1
+while k < number//2:
+    if number %k!=0:
+        print('Делится на,', k)
+    k = k+1
+print('Число делится на :', number)
