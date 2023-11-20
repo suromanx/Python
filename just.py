@@ -1,13 +1,7 @@
-#Ordinary number
-number = int(input('VV'))
-num = number // 2
-k = 2
-while k <= num:
-   if number % k == 0:
-       print ('не простое')
-       break
-   k =+ 1
+a,b,c = map(int,input('vv'.split()))
+if a+b > c and c+b>a and c+a>b:
+    print('Такой треугольник может существовать')
 else:
-    print('простое')
+    print('Taкой треугольник существовать не может')
 
-print('the end')
+
