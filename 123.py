@@ -1,22 +1,28 @@
-def create_tuple(user_text):
-    original_tuple = tuple(user_text)
-    return original_tuple
+import random
+import string
 
-def the_new_tuple(original_tuple, step):
-    new_tuple = original_tuple[::step]
-    return  new_tuple
+def create_nested_list(rows, cols):
+    nested_list = []
+
+
+    for _ in range(rows):
+        row = [random.choice(string.ascii_uppercase) for _ in range(cols)]
+        nested_list.append(row)
+        return nested_list
+
+
+def print_nested_list(nested_list):
+    for row in nested_list:
+        print(row)
 
 def main():
-    user_text = input('Input number')
-    step = int(input('Input step'))
+    rows = int(input('Input amount of rows'))
+    cols = int(input('Input amount of cols'))
 
-    original_tuple = create_tuple(user_text)
-    new_tuple = the_new_tuple(original_tuple,step)
+    nested_list = create_nested_list(rows, cols)
 
-
-    print('The original tuple:', original_tuple)
-    print('New tuple:', new_tuple)
-
+    print(("Nested list: "))
+    print_nested_list(nested_list)
 
 if __name__ == '__main__':
     main()
