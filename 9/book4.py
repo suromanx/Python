@@ -1,4 +1,16 @@
-binary_number = '11011011'
-decimal_number = int(binary_number, 2)
-octal_number = oct(decimal_number)
-print(octal_number[2:])
+class Alpha:
+    pass
+class Bravo(Alpha):
+    pass
+class Charlie(Bravo):
+    pass
+class Delta(Bravo):
+    pass
+class Echo(Charlie,Delta):
+    pass
+
+k=1
+
+for s in Echo.__mro__:
+    print("["+str(k)+"]",s.__name__)
+    k+=1

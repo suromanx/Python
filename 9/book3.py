@@ -15,7 +15,6 @@ k = 1
 for s in Delta.__mro__:
     print("["+str(k)+"]", s.__name__)
     k+=1
-
 obj = Delta()
 
 obj.alpha()
