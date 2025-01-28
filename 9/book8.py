@@ -21,36 +21,26 @@ class Charlie(Alpha):
 class Delta(Bravo, Charlie):
     def show(self):
         print('Class Delta: ', self.code)
+        print('1')
         super().show()
+        print('2')
         Charlie.show(self)
+        print('3')
         super(Bravo, self).show()
 
 
+print()
+
+
 def display(MyClass):
-    print("Ingeritance for " + MyClass.__name__ + ":")
+    print("Inheritance for " + MyClass.__name__ + ":")
     k = 1
     for s in MyClass.__mro__:
         print("[" + str(s) + "]", s.__name__)
         k += 1
 
 
-display(Alpha)
-A = Alpha(100)
-print()
-A.show()
-print()
-display(Bravo)
-B = Bravo(200)
-print()
-B.show()
-print()
-display(Charlie)
-print()
-C = Charlie(300)
-C.show()
-print()
 display(Delta)
-print()
 D = Delta(400)
 print()
 D.show()
